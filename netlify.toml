@@ -1,26 +1,2 @@
-[[redirects]]
-  from = "/salad-spinner"
-  to = "https://salad-spinner.netlify.app/"
-  status = 200
-  force = true
-  headers = {X-From = "Netlify"}
-  signed = "API_SIGNATURE_TOKEN"
 
-[[redirects]]
-  from = "/resume"
-  to = "/documents/resume.pdf"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/home"
-  to = "/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 200
-  force = false
 
