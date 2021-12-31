@@ -1,14 +1,16 @@
 import React from 'react'
 import { Navbar, Container } from 'react-bootstrap'
+import { useMediaQuery } from 'react-responsive';
 
 //a simple footer component that can be reused on all pages
 const Footer = () => {
 
+    const isMobile = useMediaQuery({ query: `(max-width: 992px)` });
     return (
         <div >
 
             
-            <br />
+            {!isMobile && <br /> }
             <br />
             <br />
              <Navbar bg="light"  fixed= "bottom" className="footer" >

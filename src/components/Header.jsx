@@ -6,11 +6,12 @@ import { FaYoutube, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { useMediaQuery } from 'react-responsive';
 
 
+
 //a simple header component that can be reused on all pages
 //links to other pages are also provided through buttons
-const Header = () => {
+const Header = ({path}) => {
     const isMobile = useMediaQuery({ query: `(max-width: 992px)` });
-
+    const isHomePage = path === '/';
     
     return (
         <div>
@@ -22,7 +23,7 @@ const Header = () => {
                         src={miniLogo}
                         width="40"
                         height="40"
-                        className="d-inline-block align-top"
+                        className="d-inline-block align-center"
                         alt="Logo"
                     />
                 </Navbar.Brand>
@@ -44,7 +45,10 @@ const Header = () => {
 
                     
                     <div className="d-flex justify-content-center">
-                    <Nav.Link href="/projects"><h4>Projects</h4></Nav.Link>
+                    
+                    {isHomePage ? <Nav.Link href="/projects"><h4>Projects</h4></Nav.Link> 
+                    : <Nav.Link href="/"><h4>Home</h4></Nav.Link>}
+                    
                     </div>
 
                     <div className="d-flex justify-content-center">
@@ -111,7 +115,7 @@ const Header = () => {
         <br/>
         <br/>
         <br/>
-        <br/>
+        {!isMobile && <br /> }
         </div>
         
     )
