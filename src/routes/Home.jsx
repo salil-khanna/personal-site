@@ -102,7 +102,7 @@ const Home = () => {
                                 />
                                 </a>
                                 <br/>
-                                <a href="/documents/resume.pdf" target="_blank"> View full resume here </a>
+                                <a href="/resume" target="_blank"> View full resume here </a>
                             </h4>
                             <br/>
                             

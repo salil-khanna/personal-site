@@ -40,7 +40,7 @@ const Header = ({path}) => {
                     
                     {/* center a div */}
                     <div className="d-flex justify-content-center">
-                    <Nav.Link href="/documents/resume.pdf" target = "_blank" ><h4>Resume</h4></Nav.Link>
+                    <Nav.Link href="/resume" target = "_blank" ><h4>Resume</h4></Nav.Link>
                     </div>
 
                     
