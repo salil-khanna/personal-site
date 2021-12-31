@@ -3,6 +3,8 @@
   to = "https://salad-spinner.netlify.app/"
   status = 200
   force = true
+  headers = {X-From = "Netlify"}
+  signed = "API_SIGNATURE_TOKEN"
 
 [[redirects]]
   from = "/resume"
