@@ -46,13 +46,6 @@ const Home = () => {
                     <br/>
                     <div className="box-body">
                         <div className="box-body-content">
-                            <h3>Site's Purpose: </h3>
-                            <h4>
-                                This site serves as a page about all things me: my portfolio, contact information, 
-                                and if I ever get around to coding it, a future blog of my thoughts. Hope you enjoy your time here! :)
-                            </h4>
-                            <br />
-
                             <h3>About Me: </h3>
                                 <h4>
                                     <ul>
