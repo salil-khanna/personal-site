@@ -1,5 +1,5 @@
 import React from 'react'
-import nycProfilePic from '../img/nycProfilePic3.png'
+import nycProfilePic from '../img/nycProfilePic3.jpg'
 import { useLocation } from 'react-router-dom'
 import Header from '../components/Header'
 import microsoft from '../img/microsoft.png'
@@ -15,7 +15,7 @@ const Home = () => {
         
         <div>
             <Header path = {pathname}/>
-            <div className="card container text-left">
+            <div className="card container text-left" style={{ border: "1px solid orange" }}>
                 <div className="box-content">
                     <br/>
 
@@ -75,8 +75,7 @@ const Home = () => {
                                     
                                 /></a>
                                 
-
-                                <br/>
+                                <ol> * Sept 2022 - Present</ol>
                                 Software Engineer Intern @ <a href= "https://www.microsoft.com" target="_blank" rel="noreferrer"><img
                                     src={microsoft}
                                     width="28"
@@ -85,7 +84,7 @@ const Home = () => {
                                     alt="datadog"
                                 /></a>
                                 
-                                <br/>  
+                                <ol> * May 2022 - Aug 2022 </ol>
                                 Tech Analyst Co-op @ <a href= "https://www.fidelity.com" target="_blank" rel="noreferrer"> <img
                                     src={fidelity}
                                     width="32"
@@ -94,7 +93,8 @@ const Home = () => {
                                     alt="datadog"
                                 />
                                 </a>
-                                <br/>
+                                <ol> * July 2021 - Dec 2021 </ol>
+
                                 <a href="/resume" target="_blank"> View full resume here </a>
                             </h4>
                             <br/>
