@@ -1,15 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import nycProfilePic from '../img/nycProfilePic3.jpg'
 import { useLocation } from 'react-router-dom'
 import Header from '../components/Header'
 import microsoft from '../img/microsoft.png'
 import datadog from '../img/datadog.png'
 import fidelity from '../img/fidelity.png'
+import loadingGif from '../img/loading.gif'
 import { FaYoutube, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 //a home page route with a sandbox logo and a bunch of buttons to redirect to other pages
 const Home = () => {
     const {pathname} = useLocation();
+
+    // use state for image loading and
+    // use effect to load image
+    const [imageLoaded, setImageLoaded] = useState(false);
+    const handleImageLoaded = () => {
+        setImageLoaded(true);
+    }
 
     return (
         
@@ -21,6 +29,8 @@ const Home = () => {
 
                     <div className="box-header">
                         <div className = "text-center">
+                            { !imageLoaded && <img src={loadingGif} alt="loading" className="img-fluid rounded-circle" style={{ width: "200px", height: "200px" }} /> }
+
                             <img
                                 src={nycProfilePic}
                                 
@@ -31,7 +41,7 @@ const Home = () => {
                                     // "box-shadow": 0 20px 30px 0 rgba(199, 179, 2, 0.15);
 
                                 }}
-
+                                onLoad={handleImageLoaded}
                                 alt="my-face"
                             />
                         </div>
